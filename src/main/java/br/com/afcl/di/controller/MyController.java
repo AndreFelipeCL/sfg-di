@@ -6,14 +6,20 @@
  */
 package br.com.afcl.di.controller;
 
+import br.com.afcl.di.service.GreetingService;
 import org.springframework.stereotype.Controller;
 
 /**
  * @author andrelei - André Felipe C. Leite
  * @version 1.0 30/06/2020
  */
-@Controller
-public class MyController {
+@Controller public class MyController {
+
+	private GreetingService greetingService;
+
+	public MyController(final GreetingService greetingService) {
+		this.greetingService = greetingService;
+	}
 
 	public String sayHello() {
 		System.out.println("Hello World!");

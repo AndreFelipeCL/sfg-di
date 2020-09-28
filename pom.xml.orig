@@ -24,6 +24,14 @@
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
+<<<<<<< HEAD
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+=======
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -37,6 +45,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+>>>>>>> fed7f7f8e659c7ad212e6cde639ec78d7b9c4aae
 
     <build>
         <plugins>
