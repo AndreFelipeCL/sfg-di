@@ -3,11 +3,9 @@ package br.com.afcl.di;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class DiApplicationTests {
+@SpringBootTest class DiApplicationTests {
 
-	@Test
-	void contextLoads() {
+	@Test void contextLoads() {
 	}
 
 }
