@@ -1,6 +1,6 @@
 package br.com.afcl.di.controller;
 
-import br.com.afcl.di.services.GreetingService;
+import br.com.afcl.di.service.GreetingService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 

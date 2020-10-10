@@ -4,7 +4,7 @@
  * Copyright (c) 2020, Embraer. All rights reserved. Embraer S/A
  * proprietary/confidential. Use is subject to license terms.
  */
-package br.com.afcl.di.services;
+package br.com.afcl.di.service;
 
 
 import br.com.afcl.di.repository.GreetingRepository;
@@ -23,11 +23,11 @@ public class GreetingServiceFactory {
 
 	public GreetingService createGreetingService(final String lang) {
 		switch (lang){
-			case "en":
+			case "EN":
 				return new PrimaryGreetingService(greetingRepository);
-			case "es":
+			case "ES":
 				return new PrimarySpanishGreetingService(greetingRepository);
-			case "de":
+			case "DE":
 				return new PrimaryGermanGreetingService(greetingRepository);
 			default:
 				return new PrimaryGreetingService(greetingRepository);

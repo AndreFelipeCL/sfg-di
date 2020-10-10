@@ -6,7 +6,7 @@
  */
 package br.com.afcl.di.controller;
 
-import br.com.afcl.di.services.GreetingService;
+import br.com.afcl.di.service.GreetingService;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -17,12 +17,14 @@ import org.springframework.stereotype.Controller;
 
 	private GreetingService greetingService;
 
-	public MyController(final GreetingService greetingService) {
+	public MyController(GreetingService greetingService) {
 		this.greetingService = greetingService;
 	}
 
-	public String sayHello() {
-		System.out.println("Hello World!");
-		return "Hi Folks!";
+	public String hello(){
+		System.out.println("Hello!!! ");
+
+		return greetingService.sayGreeting();
 	}
+
 }
