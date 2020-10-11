@@ -2,6 +2,7 @@ package br.com.afcl.di;
 
 import br.com.afcl.di.controller.MyController;
 import br.com.afcl.di.examplebeans.FakeDataSource;
+import br.com.afcl.di.examplebeans.FakeJmsBroker;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -16,6 +17,9 @@ public class DiApplication {
 
 		final FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean("fakeDataSource");
 		System.out.println(fakeDataSource);
+
+		final FakeJmsBroker fakeJmsBroker = (FakeJmsBroker) ctx.getBean("fakeJmsBroker");
+		System.out.println(fakeJmsBroker);
 	}
 
 }
