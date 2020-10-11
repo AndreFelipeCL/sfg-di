@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.PropertySources;
 
 /**
  * @author André Felipe C. Leite
@@ -13,7 +14,11 @@ import org.springframework.context.annotation.PropertySource;
  * @since 10/10/2020 - 15:29
  */
 @Configuration
-@PropertySource({"classpath:datasource.properties", "classpath:jms.properties"})
+//@PropertySource({"classpath:datasource.properties", "classpath:jms.properties"})
+@PropertySources({
+		@PropertySource("classpath:datasource.properties"),
+		@PropertySource("classpath:jms.properties")
+})
 public class PropertyConfig {
 
 	@Value("${afcl.username}")
@@ -36,7 +41,9 @@ public class PropertyConfig {
 	}
 
 	@Bean
-	public FakeJmsBroker fakeJmsBroker() { return new FakeJmsBroker(jmsUsername, jmsPassword, jmsUrl); }
+	public FakeJmsBroker fakeJmsBroker() {
+		return new FakeJmsBroker(jmsUsername, jmsPassword, jmsUrl);
+	}
 
 	/*
 	 * Required in earlier versions.
