@@ -1,0 +1,23 @@
+afcl:
+  jms:
+    username: "JMS Username"
+    password: "jmssecretkey"
+    dburl: "jmstesteurl"
+---
+spring:
+  profiles:
+    active: de
+
+# German JMS username
+afcl:
+  jms:
+    username: "JMS Username in German"
+---
+spring:
+  profiles:
+    active: es
+
+# Spanish JMS username
+afcl:
+  jms:
+    username: "JMS Username in Spanish"
