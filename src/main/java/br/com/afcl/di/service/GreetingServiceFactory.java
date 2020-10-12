@@ -29,6 +29,8 @@ public class GreetingServiceFactory {
 				return new PrimarySpanishGreetingService(greetingRepository);
 			case "DE":
 				return new PrimaryGermanGreetingService(greetingRepository);
+			case "PT_BR":
+				return new PrimaryBrazilianPortugueseGreetingService(greetingRepository);
 			default:
 				return new PrimaryGreetingService(greetingRepository);
 		}

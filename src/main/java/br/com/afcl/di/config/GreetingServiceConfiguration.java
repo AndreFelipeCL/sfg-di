@@ -47,4 +47,11 @@ public class GreetingServiceConfiguration {
 		return greetingServiceFactory.createGreetingService("DE");
 	}
 
+	@Bean
+	@Primary
+	@Profile({"pt_br"})
+	public GreetingService primaryBrazilianPortugueseGreetingService(GreetingServiceFactory greetingServiceFactory){
+		return greetingServiceFactory.createGreetingService("PT_BR");
+	}
+
 }

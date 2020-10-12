@@ -19,4 +19,9 @@ public class GreetingRepositoryImpl implements GreetingRepository {
 	public String getGermanGreeting() {
 		return "Primärer Grußdienst";
 	}
+
+	@Override
+	public String getBrazilianPortugueseGreeting() {
+		return "Olá - Serviço primário de cumprimento";
+	}
 }

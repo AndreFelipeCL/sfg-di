@@ -21,3 +21,12 @@ spring:
 afcl:
   jms:
     username: "JMS Username in Spanish"
+---
+spring:
+  profiles:
+    active: pt_br
+
+# Spanish JMS username
+afcl:
+  jms:
+    username: "JMS Username in Portugês do Brasil"
